@@ -139,8 +139,8 @@
 
 \begin{center}
     \textbf{{\LARGE Harsh Bordekar}} \\
-    \textbf{PhD Candidate at DLR \& TU Braunschweig} \\
-    \textbf{Applied Scientist in composites and Physics-based ML models} 
+    \textbf{Stress \& F\&DT Engineer | PhD Candidate at DLR \& TU Braunschweig} \\
+    \textbf{Aircraft Structural Analysis --- Fatigue \& Damage Tolerance, Metallic \& Composite}
     
     \vspace{0.5em}
     
@@ -161,10 +161,10 @@
 \vspace{5pt}
 
 \section{\color{blue}Profile}
-AI and Simulation Engineer with 7+ years of experience in high-fidelity FEM modeling and structural analysis, specializing in composite structures and progressive damage in aerospace-relevant applications using eXplainable AI (XAI). Currently a PhD Candidate at DLR \& TU Braunschweig, developing AI-driven multiscale frameworks for leakage onset prediction in CFRP hydrogen storage systems, integrating physics-based modeling with data-driven methods. Proven expertise in linear and non-linear FEM, model verification \& validation, and stochastic simulations, with a strong focus on delivering reliable, certification-oriented results. Experienced in leading technical workflows, mentoring students, and guiding simulation-driven decision-making in academic and applied research environments. Adept at bridging classical simulation with modern AI approaches, including Generative AI and physics-constrained AI, as well as automation, uncertainty quantification, and scalable HPC-based pipelines (SLURM), to enhance efficiency, robustness, and innovation in structural analysis processes.
+Structural analysis and simulation engineer with 7+ years of experience in aerospace structural integrity, spanning fatigue and damage tolerance (F\&DT) of metallic structures and progressive damage of composites. Experience covers fatigue-life and crack-growth assessment (Paris law, NASGRO, Murakami and El-Haddad defect models) to determine allowable defect sizes, as well as high-fidelity linear and non-linear FEM, model verification \& validation, and stochastic/uncertainty analysis for certification-oriented sizing. Currently a PhD Candidate at DLR \& TU Braunschweig, developing multiscale frameworks that translate damage models into structural sizing inputs consistent with regulatory boundary conditions. Comfortable with analytical stress methods (Niu, Bruhn) alongside FE solvers (Nastran/Patran, ABAQUS), and a strong record of process automation using Python and HPC pipelines to accelerate analysis and reporting. Experienced in guiding subcontracted/student technical work, verifying externally produced analyses, and communicating results to design and project teams.
 
 \vspace{0.2cm}
-\textbf{Core Competencies:} FEM Structural Analysis, Linear \& Non-linear Simulation, Composite Materials (CFRP), Progressive Damage Modeling, Verification \& Validation, Aircraft Structural Analysis Concepts, Simulation Automation, Generative AI, Physics-Constrained Machine Learning, Data-Driven Engineering, Uncertainty Quantification (UQ), Predictive Modeling, HPC (SLURM), Python Programming, Scientific Computing, Reproducible Pipelines
+\textbf{Core Competencies:} Fatigue \& Damage Tolerance (F\&DT), Crack Growth \& Fatigue Life (Paris/NASGRO), Allowable Defect Size (Murakami, El-Haddad), Metallic \& Composite Structural Analysis, Linear \& Non-linear FEM (Nastran/Patran, ABAQUS), Analytical Stress Methods (Niu, Bruhn), Verification \& Validation, Certification-Oriented Sizing, Airworthiness \& Damage Tolerance Concepts, Stress Approval of Analyses, Simulation \& Reporting Automation, Uncertainty Quantification (UQ), Python Programming, HPC (SLURM)
 
 
 
@@ -172,16 +172,20 @@ AI and Simulation Engineer with 7+ years of experience in high-fidelity FEM mode
 
 
 \resumeSubheading
-    {Simulation Engineer}{DLR \& TU Braunschweig}
-    {Composite modeling and AI models}{Feb $2021$ - Present}
+    {Structural Analysis / Simulation Engineer}{DLR \& TU Braunschweig}
+    {Damage tolerance, structural sizing \& simulation automation}{Feb $2021$ - Present}
     \resumeItemListStart
-    \item Developed a probabilistic AI-driven multiscale framework for leakage onset prediction in CFRP hydrogen storage tanks, integrating microstructure-informed mesoscale models with stochastic spatial distributions to enable probability-of-failure estimation across structural scales.
+    \item (PhD) Developed a probabilistic, physics-based multiscale framework for leakage onset prediction in CFRP hydrogen storage tanks, coupling microstructure-informed mesoscale damage models with stochastic spatial defect distributions to propagate failure across ply, laminate, and structural scales and estimate probability of failure.
 \\
 \textbf{Tools: Git, Docker, Python, ABAQUS, FEM, HPC/SLURM}
 
-\item Established a certification-aligned leakage criterion/envelope bridging progressive damage models and system-level tank simulations, translating multiscale FEM outputs into structural sizing inputs with load-path-informed failure criteria consistent with regulatory boundary conditions.
+\item (PhD) Derived a certification-aligned leakage failure criterion (leakage envelope) that maps combined strain/load states to leakage onset, bridging progressive damage models and system-level tank simulations and translating multiscale FEM outputs into structural sizing inputs consistent with regulatory boundary conditions --- the type of failure-criterion definition and stress justification required for structural approval.
 \\
 \textbf{Tools: ABAQUS, Python, FEM post-processing using C++}
+
+\item Verified and technically reviewed externally and student-produced analysis models, meshes, and simulation results against defined methods and acceptance criteria, providing sign-off-style checks on structural analysis data and documentation.
+\\
+\textbf{Tools: ABAQUS, Nastran, Python}
 
 \item Performed uncertainty quantification to generate leakage probability vs. strain relationships, enabling risk-informed design decisions for next-generation CFRP pressure vessels under hydrogen storage conditions.
 \\
@@ -205,16 +209,20 @@ AI and Simulation Engineer with 7+ years of experience in high-fidelity FEM mode
 
 
 \resumeSubheading
-    {Research Intern}{DLR-Braunschweig}
-    {Numerical simulations and AI}{Nov $2019$ - Jan $2021$}
+    {Research Intern --- Metallic Fatigue \& Damage Tolerance}{DLR-Braunschweig}
+    {Fatigue-life / defect-tolerance assessment}{Nov $2019$ - Jan $2021$}
 \resumeItemListStart
-    \item Developed an XAI-driven defect detection framework for additively manufactured aerospace-grade titanium components, leveraging CT scan data with explainable AI methods to automate defect classification while providing interpretable confidence outputs for engineering sign-off.
+    \item Performed fatigue and damage-tolerance assessment of aerospace-grade titanium (metallic) components, deriving allowable defect sizes for a target fatigue life using crack-growth (Paris law, NASGRO) and small-defect fatigue-limit models (Murakami, El-Haddad) --- directly linking as-built defect populations to structural fatigue substantiation.
+    \\
+    \textbf{Tools: Fatigue/crack-growth analysis (Paris, NASGRO, Murakami, El-Haddad), Python (NumPy/SciPy)}
+
+    \item Coupled defect measurements with numerical simulation to establish a defect-tolerance qualification methodology, translating fracture-mechanics and fatigue criteria into allowable-defect acceptance limits for additively manufactured metallic parts.
+    \\
+    \textbf{Tools: FEM (ABAQUS), fracture mechanics, Python}
+
+    \item Developed a CT-based, explainable-AI defect-detection framework providing interpretable confidence outputs for engineering sign-off, automating classification of internal defects feeding the fatigue assessment.
     \\
     \textbf{Tools: Python (scikit-learn / TensorFlow, SHAP / LIME / Grad-CAM), CT image processing}
-    
-    \item Coupled ML predictions with numerical simulations to determine allowable defect sizes in 3D-printed titanium alloys, establishing a data-driven qualification methodology bridging damage tolerance analysis and additive manufacturing process control.
-    \\
-    \textbf{Tools: Python, FEM (ABAQUS), NumPy/SciPy}
 
 
 \resumeItemListEnd
@@ -262,6 +270,14 @@ AI and Simulation Engineer with 7+ years of experience in high-fidelity FEM mode
 \renewcommand{\arraystretch}{1.3}
 \section{\color{blue}Skills Summary}
 \begin{tabular}{|p{8cm}p{10.5cm}|}
+
+\hline
+\textbf{Fatigue \& Damage Tolerance} &
+Crack growth (Paris, NASGRO) \(\vert\) Allowable defect size (Murakami, El-Haddad) \(\vert\) Fatigue-life assessment \(\vert\) Damage tolerance \& certification concepts \\
+
+\hline
+\textbf{Stress Analysis \& FEM} &
+FE solvers (Nastran/Patran, ABAQUS) \(\vert\) Analytical methods (Niu, Bruhn) \(\vert\) Linear \& non-linear FEM \(\vert\) Verification \& Validation \\
 
 \hline
 \textbf{Numerical Simulations} &
