@@ -1,0 +1,354 @@
+%------------------------
+% Resume Template
+% Author : Harsh
+% 
+%------------------------
+
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{datetime2}
+\usepackage{tikz}
+\usepackage{blindtext}
+\usepackage[document]{ragged2e}
+\usepackage{xcolor}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+\usepackage{tikz}
+
+% Helper command to draw skill circles
+\newcommand{\skilllevel}[1]{
+  \begin{tikzpicture}[baseline=-0.5ex]
+    \foreach \i in {1,...,5} {
+      \ifnum\i>#1
+        \draw[fill=white] (\i*0.25,0) circle (0.08);
+      \else
+        \draw[fill=black] (\i*0.25,0) circle (0.08);
+      \fi
+    }
+  \end{tikzpicture}
+}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{blue}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+% Add this to your preamble
+\usepackage{array}
+\newenvironment{awlist}{% 
+    \begin{tabular}{>{\bfseries}l @{\hspace{1em}} p{13cm}}
+}{%
+    \end{tabular}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+%\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[label={}, leftmargin=0pt]}
+%\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue}
+
+%\usepackage{tgheros}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{charter}
+%\usepackage{fourier}
+%\usepackage{tgpagella}
+%\usepackage{lmodern}
+%\usepackage{tgheros}
+%\usepackage{newtxtext}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+
+
+
+%----------HEADING-----------------
+
+\begin{center}
+    \textbf{{\LARGE Harsh Bordekar}} \\
+    \textbf{PhD Candidate at DLR \& TU Braunschweig} \\
+    \textbf{Applied Scientist in composites and Physics-based ML models} 
+    
+    \vspace{0.5em}
+    
+    \small
+    \begin{tabular}{*{3}{l@{\hspace{2.5em}}}}
+        \faIcon[regular]{envelope} \href{mailto:harshbordekar@gmail.com}{harshbordekar@gmail.com} & 
+        \faIcon{linkedin} \href{https://www.linkedin.com/in/harsh-s-bordekar/}{Harsh's LinkedIn} & 
+%        \faIcon{github} \href{https://github.com/gagankaushikmanyam}{Gagan's Github} \\
+        \faIcon{mobile-alt} +49 (0) 17673888310 &
+        \faIcon{map-marker-alt} Braunschweig, Germany & 
+        %\faIcon{home} Niedersachsen (Residence) & 
+        \faIcon{id-card} Permanent Resident - Germany
+    \end{tabular}
+\end{center}
+
+
+
+\vspace{5pt}
+
+\section{\color{blue}Profile}
+AI and Simulation Engineer with 7+ years of experience in high-fidelity FEM modeling and structural analysis, specializing in composite structures and progressive damage in aerospace-relevant applications using eXplainable AI (XAI). Currently a PhD Candidate at DLR \& TU Braunschweig, developing AI-driven multiscale frameworks for leakage onset prediction in CFRP hydrogen storage systems, integrating physics-based modeling with data-driven methods. Proven expertise in linear and non-linear FEM, model verification \& validation, and stochastic simulations, with a strong focus on delivering reliable, certification-oriented results. Experienced in leading technical workflows, mentoring students, and guiding simulation-driven decision-making in academic and applied research environments. Adept at bridging classical simulation with modern AI approaches, including Generative AI and physics-constrained AI, as well as automation, uncertainty quantification, and scalable HPC-based pipelines (SLURM), to enhance efficiency, robustness, and innovation in structural analysis processes.
+
+\vspace{0.2cm}
+\textbf{Core Competencies:} FEM Structural Analysis, Linear \& Non-linear Simulation, Composite Materials (CFRP), Progressive Damage Modeling, Verification \& Validation, Aircraft Structural Analysis Concepts, Simulation Automation, Generative AI, Physics-Constrained Machine Learning, Data-Driven Engineering, Uncertainty Quantification (UQ), Predictive Modeling, HPC (SLURM), Python Programming, Scientific Computing, Reproducible Pipelines
+
+
+
+\section{\color{blue}Professional Experience}
+
+
+\resumeSubheading
+    {Simulation Engineer}{DLR \& TU Braunschweig}
+    {Composite modeling and AI models}{Feb $2021$ - Present}
+    \resumeItemListStart
+    \item Developed a probabilistic AI-driven multiscale framework for leakage onset prediction in CFRP hydrogen storage tanks, integrating microstructure-informed mesoscale models with stochastic spatial distributions to enable probability-of-failure estimation across structural scales.
+\\
+\textbf{Tools: Git, Docker, Python, ABAQUS, FEM, HPC/SLURM}
+
+\item Established a certification-aligned leakage criterion/envelope bridging progressive damage models and system-level tank simulations, translating multiscale FEM outputs into structural sizing inputs with load-path-informed failure criteria consistent with regulatory boundary conditions.
+\\
+\textbf{Tools: ABAQUS, Python, FEM post-processing using C++}
+
+\item Performed uncertainty quantification to generate leakage probability vs. strain relationships, enabling risk-informed design decisions for next-generation CFRP pressure vessels under hydrogen storage conditions.
+\\
+\textbf{Tools: Python (scipy, numpy), Monte Carlo methods, ABAQUS}
+
+\item Developed an Agentic AI application for microstructure-informed property prediction, accepting natural language queries and microstructure images as inputs to predict homogenized/effective material properties — powered by a physics-based CNN as a custom tool and a hierarchical RAG pipeline for context-aware retrieval of materials knowledge, enabling on-demand computational homogenization without full-scale FEM runs.
+\\
+\textbf{Tools: Python, Physics-based CNN, Hierarchical RAG, LLM agent framework, image processing}
+\item Evaluated thermal protection effectiveness for the Callisto reusable rocket program's metal upper housing bay, executing large-scale thermal and structural simulations on HPC infrastructure.
+\\
+\textbf{Tools: ABAQUS, SLURM (HPC), Python, Nastran, Patran}
+
+\item Instructed 60+ Master's students in FEM theory and ABAQUS-based CFRP modelling, covering Continuum Damage Mechanics (CDM), Progressive Damage Analysis (PDA), and Cohesive Zone Modelling (CZM), demonstrating both deep technical expertise and the ability to lead and communicate complex simulation workflows.
+\\
+\textbf{Tools: ABAQUS, Automation using Python}
+
+\resumeItemListEnd
+	
+
+  \vspace{10pt}
+
+
+\resumeSubheading
+    {Research Intern}{DLR-Braunschweig}
+    {Numerical simulations and AI}{Nov $2019$ - Jan $2021$}
+\resumeItemListStart
+    \item Developed an XAI-driven defect detection framework for additively manufactured aerospace-grade titanium components, leveraging CT scan data with explainable AI methods to automate defect classification while providing interpretable confidence outputs for engineering sign-off.
+    \\
+    \textbf{Tools: Python (scikit-learn / TensorFlow, SHAP / LIME / Grad-CAM), CT image processing}
+    
+    \item Coupled ML predictions with numerical simulations to determine allowable defect sizes in 3D-printed titanium alloys, establishing a data-driven qualification methodology bridging damage tolerance analysis and additive manufacturing process control.
+    \\
+    \textbf{Tools: Python, FEM (ABAQUS), NumPy/SciPy}
+
+
+\resumeItemListEnd
+
+  \vspace{10pt}
+
+
+
+	
+\resumeSubheading
+    {Student Research Assistant}{Leibniz University Hannover}
+    {Institute of Static and Dynamic}{Sep $2018$ - Oct $2019$}
+    
+    \resumeItemListStart
+    
+
+    \item Developed an ML framework for automated detection and quantification of fiber undulations in unidirectional CFRP laminates, generating spatially resolved defect metrics as direct inputs for probabilistic structural simulation models to assess manufacturing-induced variability on mechanical performance.
+    \\
+    \textbf{Tools: Matlab, Python (scikit-learn / TensorFlow), image processing, NumPy/SciPy}
+    
+\resumeItemListEnd
+\vspace{10pt}
+
+    \resumeSubheading
+    {Design Engineer }{Gujarat Industrial Development Corporation}
+    {AK. Alloys}{Mar $2017$ - Mar $2018$}
+    \resumeItemListStart
+   \item Designed sand cast components with manufacturing tolerances and process constraints, translating functional requirements into production-ready geometries compliant with sand casting process limitations, draft angles, parting line constraints, and dimensional quality standards.
+       \\
+    \textbf{Tools: CREO, SolidWorks, AutoCAD}
+
+\item Managed witness casting and end-to-end quality assurance processes, ensuring dimensional conformance and material integrity of cast components against engineering specifications and customer acceptance criteria.
+\\
+\textbf{Tools: CREO, SolidWorks, AutoCAD}
+
+\item Planned and optimized sand casting production schedules based on capacity, material availability, and delivery requirements, improving throughput alignment with manufacturing targets.
+\textbf{Tools: SolidWorks, AutoCAD, ERP / production planning tools}
+\resumeItemListEnd
+        
+		
+
+
+
+%-------------SKILLS SUMMARY------------------
+\renewcommand{\arraystretch}{1.3}
+\section{\color{blue}Skills Summary}
+\begin{tabular}{|p{8cm}p{10.5cm}|}
+
+\hline
+\textbf{Numerical Simulations} &
+Anisotropic material modeling and FEM  \(\vert\) Fracture Mechanics  \(\vert\) Progressive damage analysis \(\vert\) Multiscale Modeling \\
+
+\hline
+\textbf{ Programming Languages} &
+Python  \(\vert\) C++ \(\vert\) FORTRAN \(\vert\) MATLAB \\
+\hline
+
+\textbf{ Data Analysis \& Scientific Computing} &
+NumPy \(\vert\) Pandas \(\vert\) Matplotlib \(\vert\) Seaborn \(\vert\) Plotly \(\vert\) SALib \(\vert\) SciPy \\
+\hline
+
+\textbf{ ML \& AI} &
+Scikit-learn \(\vert\) TensorFlow \(\vert\) PyTorch \\
+\hline
+
+\textbf{LLMs \& Generative AI} &
+Hugging Face Transformers (Fine-tuning) \(\vert\) Prompt Engineering \(\vert\) \\ & Embeddings \(\vert\) RAG \(\vert\) LangChain \(\vert\) LangGraph \(\vert\) MCP \\
+
+\hline
+
+\textbf{ APIs \& Backend Development} &
+RESTful APIs \(\vert\) FastAPI \(\vert\) JSON\\
+\hline
+
+
+\textbf{ Version Control \& Reproducibility} &
+Git \(\vert\) Docker \\
+\hline
+
+\textbf{ Application Development} &
+VS Code \(\vert\) JupyterLab \(\vert\) Google Colab \(\vert\) Streamlit \(\vert\) Gradio\\
+\hline
+\textbf{ Languages} &
+English (C1) \(\vert\) German (B1) \\
+\hline
+\end{tabular}
+
+\vspace{0.2cm}
+%\small{\textit{Keywords: Machine Learning, Applied ML, Model Training, Model %Evaluation, Feature Engineering, Inference Pipelines, Reproducible ML}}
+\vspace{5pt}
+
+%-----------Awards-----------------
+
+%-----------EDUCATION-----------------
+\section{\color{blue}Education and Awards}
+
+\resumeSubheading
+  {\textcolor{green!50!black}{M.Sc.} Computational Methods in Engineering}
+  {Leibniz University Hannover, Germany}{}{April 2018 -- Dec 2020}
+  \vspace{2pt}
+\textbf{Focus:} Numerical Methods, Scientific Machine Learning, Deep Learning
+\vspace{4pt}
+
+\resumeSubheading
+  {\textcolor{green!50!black}{\faAward} \textbf{3rd Prize — Best Paper Award}}
+  {DLR (German Aerospace Center)}{}{2024}
+\resumeSubheading  
+  {\textcolor{green!50!black}{\faAward} \textbf{2nd Prize — Best Paper Award}}
+  {DLR (German Aerospace Center)}{}{2026}
+\section{\color{blue}Selected Publications}
+
+\begin{enumerate}
+
+  \item \textbf{Bordekar, H.}, et al. 
+  ``eXplainable Artificial Intelligence for Automatic Defect Detection in Additively Manufactured Parts Using CT Scan Analysis.'' 
+  \textit{Journal of Intelligent Manufacturing}, vol. 36, no. 2, 2025, pp. 957--974. 
+  \href{https://link.springer.com/article/10.1007/s10845-023-02272-4}{\textcolor{blue}{[Link]}}
+
+  \item \textbf{Bordekar, H.}, et al. 
+  ``Microstructure Characterization of Fiber Composite Laminate Using eXplainable Artificial Intelligence.'' 
+  \textit{Journal of Composite Materials}, vol. 60, no. 1, 2026, pp. 3--25. 
+  \href{https://journals.sagepub.com/doi/pdf/10.1177/00219983251345559}{\textcolor{blue}{[Link]}}
+
+\end{enumerate}
+\vspace{2pt}
+
+\section{\color{blue}References}
+
+\begin{tabular}{@{} p{6cm} p{10cm}@{}}
+\textbf{\href{https://www.dlr.de/de/sy/ueber-uns/abteilungen-dlr-sy/dlr-sy-funktionsleichtbau}{Prof. Dr. Christian Huehne}} & Abteilungsleiter Funktionsleichtbau. Deutsches Zentrum für Luft- und Raumfahrt. Institut für Systemleichtbau \\
+\textbf{\href{https://www.tu-braunschweig.de/ima/team/head-of-institute/prof-dr-ing-oliver-voelkerink}{Prof. Dr. Oliver Voelkerink}} & Head of Institute., IMA, TU-Braunschweig\\
+\textbf{\href{https://www.linkedin.com/in/nicola-cersullo-41772b131 }{
+Dr. Nicola Cersullo}} & R\&T Project Manager @ Airbus Hamburg \\
+\end{tabular}
+
+\end{document}
+
