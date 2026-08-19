@@ -1,0 +1,313 @@
+%------------------------
+% Resume Template
+% Author : Harsh
+% Track  : Applied AI / Agentic AI (BMW Junior Agentic AI Engineer target)
+%------------------------
+%
+% ==== OPEN ITEMS — fill these in before sending, do not guess ====
+% 1. Number of materials documents indexed by the RAG pipeline (search "over [x] materials documents")
+% 2. Retrieval faithfulness / validation accuracy of the agentic app against ground-truth
+%    homogenization results, and size of the held-out validation set
+%    (search "validated at [x]")
+% 3. CT-scan defect-detection metrics: accuracy / precision / recall, number of CT scans used,
+%    % reduction in manual review time (search "[x]\% classification accuracy")
+%    -> these should already exist in the published Journal of Intelligent Manufacturing paper —
+%       pull them from there rather than re-deriving
+% 4. If you have ANY real data-engineering exposure (SQL, a database, an ingestion/ETL pipeline,
+%    Airflow/dbt, a named vector store such as FAISS/Qdrant/pgvector for the RAG pipeline) —
+%    add it. This is BMW's single biggest named gap and even one honest line closes it partially.
+% 5. If you have ANY testing/CI exposure (pytest, GitHub Actions, code review process) — add it.
+%    Same reason as #4.
+% 6. Confirm GitHub URL below is the one you want recruiters to see (currently your account root;
+%    consider adding a pinned README before sending).
+% ===================================================================
+
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{blindtext}
+\usepackage[document]{ragged2e}
+\usepackage{xcolor}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+\usepackage{tikz}
+
+\newcommand{\skilllevel}[1]{
+  \begin{tikzpicture}[baseline=-0.5ex]
+    \foreach \i in {1,...,5} {
+      \ifnum\i>#1
+        \draw[fill=white] (\i*0.25,0) circle (0.08);
+      \else
+        \draw[fill=black] (\i*0.25,0) circle (0.08);
+      \fi
+    }
+  \end{tikzpicture}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{blue}\titlerule \vspace{-6pt}]
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\usepackage{array}
+\newenvironment{awlist}{%
+    \begin{tabular}{>{\bfseries}l @{\hspace{1em}} p{13cm}}
+}{%
+    \end{tabular}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue}
+
+\usepackage{charter}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+
+\begin{center}
+    \textbf{{\LARGE Harsh Bordekar}} \\
+    \textbf{Agentic AI Engineer | Generative AI, RAG \& Applied Machine Learning} \\
+    \textbf{PhD Candidate, DLR \& TU Braunschweig | Physics-Informed ML for Aerospace Composites}
+
+    \vspace{0.5em}
+
+    \small
+    \begin{tabular}{*{3}{l@{\hspace{2.5em}}}}
+        \faIcon[regular]{envelope} \href{mailto:harshbordekar@gmail.com}{harshbordekar@gmail.com} &
+        \faIcon{linkedin} \href{https://www.linkedin.com/in/harsh-s-bordekar/}{Harsh's LinkedIn} &
+        \faIcon{github} \href{https://github.com/harshbordekar-stack}{github.com/harshbordekar-stack} \\
+        \faIcon{mobile-alt} +49 (0) 17673888310 &
+        \faIcon{map-marker-alt} Braunschweig, Germany &
+        \faIcon{id-card} Permanent Resident - Germany
+    \end{tabular}
+\end{center}
+
+\vspace{5pt}
+
+\section{\color{blue}Profile}
+AI/ML engineer with 3+ years of hands-on Python development and a track record of designing and building generative-AI and agentic systems, developed within an aerospace R\&D and PhD environment. Designed and built a multi-tool agentic AI application -- LangGraph-based orchestration, a hierarchical retrieval-augmented generation (RAG) pipeline, and a physics-based CNN exposed as a callable tool -- that answers natural-language materials-property queries and returns homogenized property predictions in place of full-scale FEM runs. Applied explainable-AI methods (SHAP, Grad-CAM, LIME) to CT-based defect classification, producing interpretable confidence outputs used for engineering sign-off. Comfortable across the applied-ML stack (PyTorch, TensorFlow, scikit-learn, Hugging Face Transformers) and building lightweight backends (FastAPI, REST APIs) and reproducible environments (Git, Docker) around models. Background also includes certification-oriented FEM and fatigue/damage-tolerance analysis for aerospace structures -- a physics-informed foundation that transfers directly into building AI systems whose outputs an engineer can trust.
+
+\vspace{0.2cm}
+\textbf{Core Competencies:} Agentic AI Systems (LangGraph, Multi-Agent Orchestration, Tool-Calling), Retrieval-Augmented Generation (RAG), Model Context Protocol (MCP), Explainable AI (SHAP, Grad-CAM, LIME), Computer Vision, PyTorch, TensorFlow, Python Automation, FastAPI, Docker, HPC (SLURM), Physics-Informed Machine Learning
+
+\section{\color{blue}Professional Experience}
+
+\resumeSubheading
+    {Structural Analysis / Simulation Engineer}{DLR \& TU Braunschweig}
+    {Applied AI \& simulation automation (PhD)}{Feb $2021$ - Present}
+    \resumeItemListStart
+
+    \item (PhD) Designed and built an agentic AI application for microstructure-informed materials-property prediction: a LangGraph-orchestrated multi-agent pipeline that accepts natural-language queries and microstructure images, retrieves context via a hierarchical RAG pipeline over \textbf{[x]} internal materials documents, and calls a physics-based CNN as a tool to return homogenized/effective material properties -- replacing full-scale FEM homogenization runs (hours) with on-demand inference (seconds). Retrieval/prediction faithfulness validated at \textbf{[x]}\% against ground-truth homogenization results on a held-out set of \textbf{[x]} cases.
+    \\
+    \textbf{Tools: LangGraph, RAG, Hierarchical Retrieval, Physics-Based CNN (Tool-Calling), LLM Agent Framework, Python}
+
+    \item Developed a probabilistic, physics-based multiscale framework for leakage-onset prediction in CFRP hydrogen storage tanks, coupling microstructure-informed mesoscale damage models with stochastic spatial defect distributions to propagate failure across ply, laminate, and structural scales and estimate probability of failure -- an ML-surrogate-style workflow standing in for computationally expensive full-scale simulation.
+    \\
+    \textbf{Tools: Python, ABAQUS, FEM, HPC/SLURM, Monte Carlo methods}
+
+    \item Verified and technically reviewed externally and student-produced analysis models, meshes, and simulation results against defined methods and acceptance criteria, issuing documented findings before release.
+    \\
+    \textbf{Tools: ABAQUS, Nastran, Python}
+
+    \item Performed uncertainty quantification (Monte Carlo) to generate probability-of-failure relationships from simulation outputs, enabling risk-informed design decisions -- directly applicable UQ/statistical-modelling experience for evaluating ML model outputs under uncertainty.
+    \\
+    \textbf{Tools: Python (SciPy, NumPy), Monte Carlo methods, ABAQUS}
+
+    \item Instructed 60+ Master's students in FEM theory and ABAQUS-based CFRP modelling, covering Continuum Damage Mechanics, Progressive Damage Analysis, and Cohesive Zone Modelling -- direct experience coaching others through complex technical material, a named responsibility of this role.
+    \\
+    \textbf{Tools: ABAQUS, Python automation}
+
+    \resumeItemListEnd
+
+    \vspace{10pt}
+
+\resumeSubheading
+    {Research Intern, Metallic Fatigue \& Damage Tolerance}{DLR-Braunschweig}
+    {Explainable AI \& fatigue/defect-tolerance assessment}{Nov $2019$ - Jan $2021$}
+    \resumeItemListStart
+
+    \item Developed a CT-based, explainable-AI defect-detection framework achieving \textbf{[x]}\% classification accuracy (\textbf{[x]} precision / \textbf{[x]} recall) on \textbf{[x]} CT scans of additively manufactured titanium parts, cutting manual review time by \textbf{[x]}\%, with SHAP, Grad-CAM and LIME outputs used to support engineering sign-off. \textit{(Published: Journal of Intelligent Manufacturing, 2025.)}
+    \\
+    \textbf{Tools: Python (scikit-learn, TensorFlow), SHAP, Grad-CAM, LIME, CT image processing}
+
+    \item Assessed fatigue and defect tolerance of aerospace-grade titanium components, deriving allowable defect sizes for a target fatigue life using small-defect fatigue models (Murakami, El-Haddad) and linking as-built defect populations -- captured via the CT/XAI pipeline above -- to structural fatigue substantiation.
+    \\
+    \textbf{Tools: Small-defect fatigue models (Murakami, El-Haddad), Python (NumPy/SciPy), FEM (ABAQUS)}
+
+    \resumeItemListEnd
+
+    \vspace{10pt}
+
+\resumeSubheading
+    {Student Research Assistant}{Leibniz University Hannover}
+    {Institute of Static and Dynamic}{Sep $2018$ - Oct $2019$}
+    \resumeItemListStart
+
+    \item Developed an ML framework for automated detection and quantification of fiber undulations in unidirectional CFRP laminates from image data, generating spatially resolved defect metrics as inputs for probabilistic structural simulation models.
+    \\
+    \textbf{Tools: MATLAB, Python (scikit-learn, TensorFlow), image processing, NumPy/SciPy}
+
+    \resumeItemListEnd
+
+%-------------SKILLS SUMMARY------------------
+\renewcommand{\arraystretch}{1.3}
+\section{\color{blue}Skills Summary}
+\begin{tabular}{|p{8cm}p{10.5cm}|}
+
+\hline
+\textbf{LLMs \& Generative AI} &
+Agentic AI (LangGraph, Multi-Agent Orchestration) \(\vert\) Retrieval-Augmented Generation (RAG) \(\vert\) Model Context Protocol (MCP) \(\vert\) Hugging Face Transformers (Fine-tuning) \(\vert\) Prompt Engineering \(\vert\) Embeddings \(\vert\) LangChain \\
+\hline
+
+\textbf{ML \& Computer Vision} &
+PyTorch \(\vert\) TensorFlow \(\vert\) Scikit-learn \(\vert\) Explainable AI (SHAP, Grad-CAM, LIME) \(\vert\) CT/Image-based Defect Classification \\
+\hline
+
+\textbf{Programming Languages} &
+Python \(\vert\) C++ \(\vert\) FORTRAN \(\vert\) MATLAB \\
+\hline
+
+\textbf{APIs \& Backend Development} &
+RESTful APIs \(\vert\) FastAPI \(\vert\) JSON \\
+\hline
+
+\textbf{Data Analysis \& Scientific Computing} &
+NumPy \(\vert\) Pandas \(\vert\) Matplotlib \(\vert\) Seaborn \(\vert\) Plotly \(\vert\) SALib \(\vert\) SciPy \\
+\hline
+
+\textbf{Version Control \& Environments} &
+Git \(\vert\) Docker \(\vert\) VS Code \(\vert\) JupyterLab \(\vert\) Google Colab \(\vert\) Streamlit \(\vert\) Gradio \\
+\hline
+
+\textbf{Aerospace Simulation Background (secondary)} &
+FEM (Nastran/Patran, ABAQUS) \(\vert\) Fatigue \& Fracture Mechanics (Murakami, El-Haddad) \(\vert\) Multiscale / Progressive Damage Modelling \(\vert\) V\&V \(\vert\) HPC (SLURM) \\
+\hline
+
+\textbf{Languages} &
+English (C1) \(\vert\) German (B1) \\
+\hline
+\end{tabular}
+
+\vspace{0.2cm}
+\vspace{5pt}
+
+%-----------EDUCATION-----------------
+\section{\color{blue}Awards and Education}
+
+\resumeSubheading
+  {\textcolor{green!50!black}{\faAward} \textbf{2nd Prize: Best Paper Award}}
+  {DLR (German Aerospace Center)}{}{2026}
+\resumeSubheading
+  {\textcolor{green!50!black}{\faAward} \textbf{3rd Prize: Best Paper Award}}
+  {DLR (German Aerospace Center)}{}{2024}
+\vspace{4pt}
+
+\resumeSubheading
+  {\textcolor{green!50!black}{M.Sc.} Computational Methods in Engineering}
+  {Leibniz University Hannover, Germany}{}{April 2018 -- Dec 2020}
+  \vspace{2pt}
+\textbf{Focus:} Numerical Methods, Scientific Machine Learning, Deep Learning
+\vspace{4pt}
+
+\section{\color{blue}Selected Publications}
+
+\begin{enumerate}
+
+  \item \textbf{Bordekar, H.}, et al.
+  ``MicroStructAgent: A Physics-Informed Agentic AI Framework for Computational Homogenization and Quality Assurance of Fiber Composite Laminates.''
+  \textit{Manuscript in preparation}, 2026.
+
+  \item \textbf{Bordekar, H.}, et al.
+  ``eXplainable Artificial Intelligence for Automatic Defect Detection in Additively Manufactured Parts Using CT Scan Analysis.''
+  \textit{Journal of Intelligent Manufacturing}, vol. 36, no. 2, 2025, pp. 957--974.
+  \href{https://link.springer.com/article/10.1007/s10845-023-02272-4}{\textcolor{blue}{DOI}}
+
+  \item \textbf{Bordekar, H.}, et al.
+  ``Microstructure Characterization of Fiber Composite Laminate Using eXplainable Artificial Intelligence.''
+  \textit{Journal of Composite Materials}, vol. 60, no. 1, 2026, pp. 3--25.
+  \href{https://journals.sagepub.com/doi/pdf/10.1177/00219983251345559}{\textcolor{blue}{DOI}}
+
+  \item \textbf{Bordekar, H.}, et al.
+  ``Microstructure-informed Probabilistic Multiscale Modelling of CFRP via Machine-Learning-Derived Stochastic Volume Elements.''
+  \textit{Manuscript in preparation}, 2026.
+
+\end{enumerate}
+\vspace{2pt}
+
+\section{\color{blue}References}
+
+\begin{tabular}{@{} p{6cm} p{10cm}@{}}
+\textbf{\href{https://www.dlr.de/de/sy/ueber-uns/abteilungen-dlr-sy/dlr-sy-funktionsleichtbau}{Prof. Dr. Christian Huehne}} & Abteilungsleiter Funktionsleichtbau. Deutsches Zentrum für Luft- und Raumfahrt. Institut für Systemleichtbau \\
+\textbf{\href{https://www.tu-braunschweig.de/ima/team/head-of-institute/prof-dr-ing-oliver-voelkerink}{Prof. Dr. Oliver Voelkerink}} & Head of Institute., IMA, TU-Braunschweig\\
+\end{tabular}
+
+\end{document}
