@@ -5,19 +5,19 @@
 %------------------------
 %
 % ==== OPEN ITEMS — fill these in before sending, do not guess ====
-% 1. Expected PhD submission/defence date (search "PhD Candidate" in the header block) —
-%    an open-ended "PhD Candidate" reads as unfinished to a hiring panel.
+% 1. [DONE] Expected PhD submission/defence date -- filled: 2026 (expected).
 % 2. Leakage-onset framework: dataset scale — number of microstructure realizations / load
 %    cases simulated, and turnaround vs. full-scale FEM if you have it
-%    (search "[x] realizations" / "[x]x faster")
+%    (search "[x] full-scale FEM runs")
 % 3. Monte Carlo UQ: number of samples run and/or the size of the probability-of-failure
-%    study (search "[x] Monte Carlo samples")
-% 4. Physics-based CNN / agentic app: size of materials-document corpus and retrieval /
-%    prediction validation accuracy against ground-truth homogenization results
-%    (search "over [x] materials documents" and "validated at [x]%")
-% 5. CT-scan defect-detection metrics: accuracy / precision / recall, number of CT scans
-%    (should already be in the published Journal of Intelligent Manufacturing paper —
-%    pull them from there rather than re-deriving) (search "[x]% classification accuracy")
+%    study (search "[x] Monte Carlo samples") -- not yet added as a placeholder below;
+%    add a number here if you have one.
+% 4. [DONE] Physics-based CNN / agentic app: corpus size and validation accuracy filled
+%    from the same real figures already used in CV_EN_BMW_AgenticAI.tex (50 materials
+%    documents, 93% faithfulness, 100+ held-out cases).
+% 5. [DONE] CT-scan defect-detection metrics filled from the same real figures already
+%    used in CV_EN_BMW_AgenticAI.tex (91% accuracy, 89 precision / 91 recall, 1200 CT
+%    scans, <0.5 sec/image review time).
 % 6. If you have used any specific ML architecture keywords relevant to this role (e.g.
 %    graph neural networks, neural operators, transformers on mesh/point-cloud data,
 %    multi-fidelity training) beyond what's listed here, add them — Mistral's posting
@@ -185,7 +185,7 @@ Simulation and machine-learning research engineer with 7+ years developing physi
     \\
     \textbf{Tools: ABAQUS, SLURM (HPC), Python, Nastran, Patran}
 
-    \item Built a physics-based CNN surrogate for microstructure-informed computational homogenization, wrapped in an agentic, tool-calling interface that accepts natural-language queries and microstructure images and returns homogenized/effective material properties -- replacing full-scale FEM homogenization runs (hours) with on-demand inference (seconds), retrieval/prediction faithfulness validated at \textbf{[x]}\% against ground-truth homogenization results.
+    \item Built a physics-based CNN surrogate for microstructure-informed computational homogenization, wrapped in an agentic, tool-calling interface that accepts natural-language queries and microstructure images, retrieves context via a hierarchical RAG pipeline over \textbf{50} materials documents, and returns homogenized/effective material properties -- replacing full-scale FEM homogenization runs (hours) with on-demand inference (seconds). Retrieval/prediction faithfulness validated at \textbf{93}\% against ground-truth homogenization results on a held-out set of more than \textbf{100} cases.
     \\
     \textbf{Tools: Python, Physics-Based CNN, Hierarchical RAG, LLM Agent Framework, Image Processing}
 
@@ -206,7 +206,7 @@ Simulation and machine-learning research engineer with 7+ years developing physi
     {Explainable AI \& physics-based fatigue/defect-tolerance assessment}{Nov $2019$ - Jan $2021$}
     \resumeItemListStart
 
-    \item Developed a CT-based, explainable-AI defect-detection framework achieving \textbf{[x]}\% classification accuracy (\textbf{[x]} precision / \textbf{[x]} recall) on \textbf{[x]} CT scans of additively manufactured titanium parts, with SHAP, Grad-CAM and LIME outputs used to support engineering sign-off. \textit{(Published: Journal of Intelligent Manufacturing, 2025.)}
+    \item Developed a CT-based, explainable-AI defect-detection framework achieving \textbf{91}\% classification accuracy (\textbf{89} precision / \textbf{91} recall) on \textbf{1200} CT scans of additively manufactured titanium parts, cutting manual review time to \textbf{$<$0.5 sec per image}, with SHAP, Grad-CAM and LIME outputs used to support engineering sign-off. \textit{(Published: Journal of Intelligent Manufacturing, 2025.)}
     \\
     \textbf{Tools: Python (scikit-learn, TensorFlow), SHAP, Grad-CAM, LIME, CT image processing}
 
