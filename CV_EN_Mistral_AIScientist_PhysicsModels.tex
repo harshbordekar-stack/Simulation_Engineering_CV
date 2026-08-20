@@ -1,0 +1,347 @@
+%------------------------
+% Resume Template
+% Author : Harsh
+% Track  : AI4Engineering Science (Mistral AI, "AI Scientist - Physics Models")
+%------------------------
+%
+% ==== OPEN ITEMS — fill these in before sending, do not guess ====
+% 1. Expected PhD submission/defence date (search "PhD Candidate" in the header block) —
+%    an open-ended "PhD Candidate" reads as unfinished to a hiring panel.
+% 2. Leakage-onset framework: dataset scale — number of microstructure realizations / load
+%    cases simulated, and turnaround vs. full-scale FEM if you have it
+%    (search "[x] realizations" / "[x]x faster")
+% 3. Monte Carlo UQ: number of samples run and/or the size of the probability-of-failure
+%    study (search "[x] Monte Carlo samples")
+% 4. Physics-based CNN / agentic app: size of materials-document corpus and retrieval /
+%    prediction validation accuracy against ground-truth homogenization results
+%    (search "over [x] materials documents" and "validated at [x]%")
+% 5. CT-scan defect-detection metrics: accuracy / precision / recall, number of CT scans
+%    (should already be in the published Journal of Intelligent Manufacturing paper —
+%    pull them from there rather than re-deriving) (search "[x]% classification accuracy")
+% 6. If you have used any specific ML architecture keywords relevant to this role (e.g.
+%    graph neural networks, neural operators, transformers on mesh/point-cloud data,
+%    multi-fidelity training) beyond what's listed here, add them — Mistral's posting
+%    explicitly asks about training-strategy and scaling-behavior experience.
+% ===================================================================
+
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{blindtext}
+\usepackage[document]{ragged2e}
+\usepackage{xcolor}
+\usepackage{hhline}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+\usepackage{tikz}
+
+\newcommand{\skilllevel}[1]{
+  \begin{tikzpicture}[baseline=-0.5ex]
+    \foreach \i in {1,...,5} {
+      \ifnum\i>#1
+        \draw[fill=white] (\i*0.25,0) circle (0.08);
+      \else
+        \draw[fill=black] (\i*0.25,0) circle (0.08);
+      \fi
+    }
+  \end{tikzpicture}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{blue}\titlerule \vspace{-6pt}]
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\usepackage{array}
+\newenvironment{awlist}{%
+    \begin{tabular}{>{\bfseries}l @{\hspace{1em}} p{13cm}}
+}{%
+    \end{tabular}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue}
+
+\usepackage{charter}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+
+\begin{center}
+    \textbf{{\LARGE Harsh Bordekar}} \\
+    \textbf{AI Scientist -- Physics Models} \\
+    \textbf{Physics-Informed ML for Simulation, Surrogate Modelling \& Uncertainty Quantification} \\
+    \textbf{PhD Candidate, DLR \& TU Braunschweig | Aerospace Composites \& Structural Simulation}
+
+    \vspace{0.5em}
+
+    \small
+    \begin{tabular}{*{3}{l@{\hspace{2.5em}}}}
+        \faIcon[regular]{envelope} \href{mailto:harshbordekar@gmail.com}{harshbordekar@gmail.com} &
+        \faIcon{linkedin} \href{https://www.linkedin.com/in/harsh-s-bordekar/}{Harsh's LinkedIn} &
+        \faIcon{github} \href{https://github.com/harshbordekar-stack}{github.com/harshbordekar-stack} \\
+        \faIcon{mobile-alt} +49 (0) 17673888310 &
+        \faIcon{map-marker-alt} Braunschweig, Germany &
+        \faIcon{id-card} Permanent Resident - Germany
+    \end{tabular}
+\end{center}
+
+\vspace{5pt}
+
+\section{\color{blue}Profile}
+Simulation and machine-learning research engineer with 7+ years developing physics-based models for aerospace structures, including 3+ years applying ML and surrogate modelling directly to simulation problems. PhD work builds a probabilistic, physics-based multiscale surrogate framework for CFRP composites -- coupling microstructure-informed mesoscale damage models with stochastic spatial defect distributions to propagate failure from ply to structural scale, replacing computationally expensive full-scale FEM with fast, physics-consistent predictions -- alongside a certification-aligned failure criterion that the framework is evaluated against. Runs large-scale simulation campaigns on HPC/SLURM using domain-specific solvers (ABAQUS, Nastran/Patran) to generate the high-fidelity data these models depend on, and applies Monte Carlo uncertainty quantification to characterise prediction confidence ahead of design decisions -- direct, hands-on experience with the UQ/out-of-distribution estimation this role treats as a first-class concern. Also built a physics-based CNN surrogate for on-demand computational homogenization, exposed through a tool-calling interface, replacing full-scale FEM homogenization runs with fast inference. Comfortable across the applied-ML stack (PyTorch, TensorFlow, scikit-learn) and in Python/Linux/HPC environments day to day, with a track record of verifying and technically reviewing externally produced simulation models against defined acceptance criteria, and of explaining simulation and ML concepts to both engineering and non-technical audiences.
+
+\vspace{0.2cm}
+\textbf{Core Competencies:} ML for Simulation \& Surrogate Modelling, Physics-Informed Machine Learning, Multiscale / Multi-Fidelity Damage Modelling, Uncertainty Quantification \& Out-of-Distribution Estimation, High-Fidelity Simulation Data Generation, FE Solvers (ABAQUS, Nastran/Patran), HPC-Scale Simulation Campaigns (SLURM), Model Verification \& Validation, Physics-Based CNN / Surrogate Modelling, Explainable AI, Python
+
+\section{\color{blue}Professional Experience}
+
+\resumeSubheading
+    {Structural Analysis / Simulation Engineer}{DLR \& TU Braunschweig}
+    {Physics-informed ML for simulation \& surrogate modelling (PhD)}{Feb $2021$ - Present}
+    \resumeItemListStart
+
+    \item (PhD) Developed a probabilistic, physics-based multiscale surrogate framework for leakage-onset prediction in CFRP hydrogen storage tanks, coupling microstructure-informed mesoscale damage models with stochastic spatial defect distributions to propagate failure across ply, laminate, and structural scales -- replacing \textbf{[x]} full-scale FEM runs with a physics-consistent surrogate and estimating probability of failure directly from the simulation-generated dataset.
+    \\
+    \textbf{Tools: Python, ABAQUS, FEM, HPC/SLURM, Multiscale Modelling}
+
+    \item (PhD) Derived a certification-aligned leakage failure criterion mapping combined strain/load states to leakage onset, bridging progressive-damage models and system-level tank simulations and providing the physics-based evaluation standard against which the surrogate framework's coverage, accuracy, and failure modes are assessed.
+    \\
+    \textbf{Tools: ABAQUS, Python, FEM post-processing using C++}
+
+    \item Performed Monte Carlo uncertainty quantification over the multiscale simulation outputs to generate leakage-probability-vs-strain relationships, characterising prediction confidence and enabling risk-informed design decisions for next-generation CFRP pressure vessels -- direct UQ/OOD experience applied to physics-simulation outputs.
+    \\
+    \textbf{Tools: Python (SciPy, NumPy), Monte Carlo methods, ABAQUS}
+
+    \item Ran large-scale thermal and structural simulation campaigns on HPC infrastructure to evaluate thermal-protection effectiveness for the Callisto reusable-rocket programme's metal upper housing bay, using domain-specific solvers to generate high-fidelity simulation data under production-scale compute constraints.
+    \\
+    \textbf{Tools: ABAQUS, SLURM (HPC), Python, Nastran, Patran}
+
+    \item Built a physics-based CNN surrogate for microstructure-informed computational homogenization, wrapped in an agentic, tool-calling interface that accepts natural-language queries and microstructure images and returns homogenized/effective material properties -- replacing full-scale FEM homogenization runs (hours) with on-demand inference (seconds), retrieval/prediction faithfulness validated at \textbf{[x]}\% against ground-truth homogenization results.
+    \\
+    \textbf{Tools: Python, Physics-Based CNN, Hierarchical RAG, LLM Agent Framework, Image Processing}
+
+    \item Verified and technically reviewed externally and student-produced simulation models, meshes, and results against defined methods and acceptance criteria, diagnosing failure modes arising from data gaps or modelling limitations and issuing documented sign-off-style findings.
+    \\
+    \textbf{Tools: ABAQUS, Nastran, Python}
+
+    \item Instructed 60+ Master's students in FEM theory and ABAQUS-based CFRP modelling, covering Continuum Damage Mechanics (CDM), Progressive Damage Analysis (PDA), and Cohesive Zone Modelling (CZM) -- demonstrated ability to communicate simulation and ML concepts to both technical and non-technical audiences.
+    \\
+    \textbf{Tools: ABAQUS, Automation using Python}
+
+    \resumeItemListEnd
+
+    \vspace{10pt}
+
+\resumeSubheading
+    {Research Intern, Metallic Fatigue \& Damage Tolerance}{DLR-Braunschweig}
+    {Explainable AI \& physics-based fatigue/defect-tolerance assessment}{Nov $2019$ - Jan $2021$}
+    \resumeItemListStart
+
+    \item Developed a CT-based, explainable-AI defect-detection framework achieving \textbf{[x]}\% classification accuracy (\textbf{[x]} precision / \textbf{[x]} recall) on \textbf{[x]} CT scans of additively manufactured titanium parts, with SHAP, Grad-CAM and LIME outputs used to support engineering sign-off. \textit{(Published: Journal of Intelligent Manufacturing, 2025.)}
+    \\
+    \textbf{Tools: Python (scikit-learn, TensorFlow), SHAP, Grad-CAM, LIME, CT image processing}
+
+    \item Assessed fatigue and defect tolerance of aerospace-grade titanium components using small-defect fatigue models (Murakami, El-Haddad), coupling defect measurements with numerical simulation to translate physics-based fracture-mechanics criteria into allowable-defect acceptance limits.
+    \\
+    \textbf{Tools: Small-defect fatigue models (Murakami, El-Haddad), Python (NumPy/SciPy), FEM (ABAQUS)}
+
+    \resumeItemListEnd
+
+    \vspace{10pt}
+
+\resumeSubheading
+    {Student Research Assistant}{Leibniz University Hannover}
+    {Institute of Static and Dynamic}{Sep $2018$ - Oct $2019$}
+    \resumeItemListStart
+
+    \item Developed an ML framework for automated detection and quantification of fiber undulations in unidirectional CFRP laminates from image data, generating spatially resolved defect metrics used directly as high-fidelity inputs for probabilistic structural simulation models assessing manufacturing-induced variability.
+    \\
+    \textbf{Tools: MATLAB, Python (scikit-learn, TensorFlow), image processing, NumPy/SciPy}
+
+    \resumeItemListEnd
+
+%-------------SKILLS SUMMARY------------------
+\renewcommand{\arraystretch}{1.3}
+\section{\color{blue}Skills Summary}
+\begin{tabular}{|p{8cm}p{10.5cm}|}
+
+\hline
+\textbf{ML for Simulation \& Surrogate Modelling} &
+Physics-Informed Machine Learning \(\vert\) Multiscale / Multi-Fidelity Damage Modelling \(\vert\) Physics-Based CNN Surrogates \(\vert\) Computational Homogenization \\
+\hline
+
+\textbf{Uncertainty \& Evaluation} &
+Uncertainty Quantification (Monte Carlo) \(\vert\) Verification \& Validation \(\vert\) Physics-Based Evaluation Against Certification Criteria \(\vert\) Failure-Mode Diagnosis \\
+\hline
+
+\textbf{Simulation Solvers \& HPC} &
+ABAQUS \(\vert\) Nastran/Patran \(\vert\) Linear \& Non-linear FEM \(\vert\) HPC / SLURM (Large-Scale Simulation Campaigns) \(\vert\) Analytical Stress Methods (Niu, Bruhn) \\
+\hline
+
+\textbf{ML \& AI} &
+PyTorch \(\vert\) TensorFlow \(\vert\) Scikit-learn \(\vert\) Explainable AI (SHAP, Grad-CAM, LIME) \(\vert\) Hugging Face Transformers (Fine-tuning) \\
+\hline
+
+\textbf{LLMs \& Agentic Systems} &
+Retrieval-Augmented Generation (RAG) \(\vert\) LangChain \(\vert\) LangGraph \(\vert\) Model Context Protocol (MCP) \(\vert\) Tool-Calling \\
+\hline
+
+\textbf{Programming Languages} &
+Python \(\vert\) C++ \(\vert\) FORTRAN \(\vert\) MATLAB \\
+\hline
+
+\textbf{Data Analysis \& Scientific Computing} &
+NumPy \(\vert\) Pandas \(\vert\) Matplotlib \(\vert\) Seaborn \(\vert\) Plotly \(\vert\) SALib \(\vert\) SciPy \\
+\hline
+
+\textbf{APIs \& Backend Development} &
+RESTful APIs \(\vert\) FastAPI \(\vert\) JSON \\
+\hline
+
+\textbf{Version Control \& Reproducibility} &
+Git \(\vert\) Docker \(\vert\) Linux \\
+\hline
+
+\textbf{Application Development} &
+VS Code \(\vert\) JupyterLab \(\vert\) Google Colab \(\vert\) Streamlit \(\vert\) Gradio \\
+\hline
+
+\textbf{Languages} &
+English (C1) \(\vert\) German (B1) \\
+\hline
+\end{tabular}
+
+\vspace{0.2cm}
+\vspace{5pt}
+
+\newpage
+%-----------Awards-----------------
+
+%-----------EDUCATION-----------------
+\section{\color{blue}Awards and Education}
+
+\resumeSubheading
+  {\textcolor{green!50!black}{\faAward} \textbf{2nd Prize: Best Paper Award}}
+  {DLR (German Aerospace Center)}{}{2026}
+\resumeSubheading
+  {\textcolor{green!50!black}{\faAward} \textbf{3rd Prize: Best Paper Award}}
+  {DLR (German Aerospace Center)}{}{2024}
+\vspace{4pt}
+
+\resumeSubheading
+  {\textcolor{green!50!black}{PhD Candidate,} Computational Methods in Engineering}
+  {DLR \& TU Braunschweig, Germany}{}{Feb 2021 -- \textbf{[x] (expected)}}
+  \vspace{2pt}
+\textbf{Dissertation:} Physics-Informed, Multiscale Machine Learning for CFRP Composite Structures
+\vspace{4pt}
+
+\resumeSubheading
+  {\textcolor{green!50!black}{M.Sc.} Computational Methods in Engineering}
+  {Leibniz University Hannover, Germany}{}{April 2018 -- Dec 2020}
+  \vspace{2pt}
+\textbf{Focus:} Numerical Methods, Scientific Machine Learning, Deep Learning
+\vspace{4pt}
+
+\section{\color{blue}Selected Publications}
+
+\begin{enumerate}
+
+  \item \textbf{Bordekar, H.}, et al.
+  ``Microstructure-informed Probabilistic Multiscale Modelling of CFRP via Machine-Learning-Derived Stochastic Volume Elements.''
+  \textit{Manuscript in preparation}, 2026.
+
+  \item \textbf{Bordekar, H.}, et al.
+  ``MicroStructAgent: A Physics-Informed Agentic AI Framework for Computational Homogenization and Quality Assurance of Fiber Composite Laminates.''
+  \textit{Manuscript in preparation}, 2026.
+
+  \item \textbf{Bordekar, H.}, et al.
+  ``Microstructure Characterization of Fiber Composite Laminate Using eXplainable Artificial Intelligence.''
+  \textit{Journal of Composite Materials}, vol. 60, no. 1, 2026, pp. 3--25.
+  \href{https://journals.sagepub.com/doi/pdf/10.1177/00219983251345559}{\textcolor{blue}{DOI}}
+
+  \item \textbf{Bordekar, H.}, et al.
+  ``eXplainable Artificial Intelligence for Automatic Defect Detection in Additively Manufactured Parts Using CT Scan Analysis.''
+  \textit{Journal of Intelligent Manufacturing}, vol. 36, no. 2, 2025, pp. 957--974.
+  \href{https://link.springer.com/article/10.1007/s10845-023-02272-4}{\textcolor{blue}{DOI}}
+
+\end{enumerate}
+\vspace{2pt}
+
+\section{\color{blue}References}
+
+\begin{tabular}{@{} p{6cm} p{10cm}@{}}
+\textbf{\href{https://www.dlr.de/de/sy/ueber-uns/abteilungen-dlr-sy/dlr-sy-funktionsleichtbau}{Prof. Dr. Christian Huehne}} & Abteilungsleiter Funktionsleichtbau. Deutsches Zentrum für Luft- und Raumfahrt. Institut für Systemleichtbau \\
+\textbf{\href{https://www.tu-braunschweig.de/ima/team/head-of-institute/prof-dr-ing-oliver-voelkerink}{Prof. Dr. Oliver Voelkerink}} & Head of Institute., IMA, TU-Braunschweig\\
+\textbf{\href{https://www.linkedin.com/in/nicola-cersullo-41772b131 }{Dr. Nicola Cersullo}} & R\&T Project Manager @ Airbus Hamburg \\
+\end{tabular}
+
+\end{document}
